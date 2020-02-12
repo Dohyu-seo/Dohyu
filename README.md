@@ -1,2 +1,2 @@
 # Dohyu
-increpas cls2
+연습용
