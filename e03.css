@@ -1,0 +1,47 @@
+body{
+	text-align: center;
+}
+.inline{
+	display: inline-block;
+	border: none; background: transparent;
+	height: 40px;
+	
+}
+table{
+	vertical-align: middle;
+}
+.divbor1{
+	border: 1px solid gray;
+	border: 1px solid #4ec53d;
+	padding: 3%;
+}
+
+.centered {
+	width: 400px;
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+}
+
+.banner{
+	text-align: center;
+	color: #4ec53d;
+	font-weight: bold;
+	font-size: 24pt;
+}
+.divTable{
+	border: 4px nonn;
+	width: 400px;
+	
+}
+.leftText{
+	text-align: left;
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+span {
+  display: inline-block;
+  color: gray;
+  font-size: 18px;
+}

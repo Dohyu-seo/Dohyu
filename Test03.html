@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+<style>
+		body {
+			text-align: center;
+			background-image: url('../img/background_img2.jpg');
+			background-size: 50%;
+			
+		}
+		.iblock{
+			display: inline-block;
+		}
+		
+		.div100 {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+		}
+
+		.round50 {
+			border-radius: 50%;
+		}
+		
+		.sh10 {
+			box-shadow: 0 0 10px #F500FF;
+		}
+		
+		.dContainer{
+			width: 110px;
+			height: 110px;
+			padding: 5px;
+			border: 1px solid orange;
+		}
+		#img1{
+			width: auto;
+			height: 100px;
+		}
+		#id1{
+			overflow: hidden;
+			margin-top: 5px;
+		}
+		#id2{
+			width: 100px;
+			height: auto;
+			margin-top: 20px;
+		}
+		#id3{
+			background-color: orange;
+			border: 2px solid coral;
+		}
+		#id4{
+			background-color: coral;
+		}
+</style>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+	<!--
+		class 속성
+			: 태그에 속성을 공통적으로 부여하기 위해서 부여하는 속성
+			클래스를 쓰게되면 공통적으로 쓸 수 있다 라는 말.
+				
+				inner style 또는 outer style 형식으로 스타일을 적용할 경우에는
+				클래스에 대한 정의를 다음 형식으로 해주어야한다.
+					
+					형식]
+						
+						.클래스이름{
+							속성이름: 속성값;
+							속성이름: 속성값;
+							...
+						}
+				참고]
+					class속성의 형식은 공백을 이용해서 중복시킬 수 있다.
+					
+		inner style에서 태그에 직접 스타일을 적용시키는 방법
+			태그이름{
+				속성이름: 속성값;
+				...
+			}
+		
+		태그에 id 속성을 부여해서 처리하는 방법
+			1. 태그에 id="아이디이름"
+			2. style 태그내부에 
+				
+				#아이디이름 {
+					속성이름: 속성값;
+					속성이름: 속성값;
+					...
+				}
+				inline 스타일을 id로 적용시켜서 해보세요.
+ 	-->
+	<div class="div100" id="id4">div1</div>
+	<br>
+	<br>
+	<div class="div100 round50 sh10" id="id3">div1</div>
+	<br>
+	<!-- 
+		테두리의 모서리를 둥글게 처리하는 방법
+			border-radius: 사이즈;
+	 -->
+	<img class="round50 sh10" src="../img/img_avatar1.png" id="id2"/>
+	<br>
+	<br>
+	<div class="round50 iblock dContainer" >
+		<div class="div100 round50 sh10" id="id1">
+			<!--  box-shadow : 오른쪽 아래 흐림도 색상; -->
+			<img class="iblock" id="img1" src="../img/img_car01.png" />
+			<!--  margin-left: -50px -->
+		</div>
+	</div>
+</body>
+</html>

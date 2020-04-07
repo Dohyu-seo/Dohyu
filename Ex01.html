@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+<!--  태그 만들고 스타일 정의 해보자. 
+w3.css에 샘플이 있다.examples_login.htm
+-->
+<link rel="stylesheet" href="./css/w3.css"/>
+
+<style>
+
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<div class="w3-col m3"><p></p></div> <!-- 내용이 없으면 영역을 차지하지않습니다.
+												p태그를 주어 영역을 차지하도록 해주세요. -->
+	<div class="w3-col m6"><!-- m3, m6... 은 화면을 12등분해서 그 차지하는 공간을 의미한다.  그리드 시스템 이라고 한다. -->
+	<h3 class="w3-blue">Login Form</h3>
+	<div class="w3-col">
+		<input type="radio" value="Male" id="m" name="gen"><label for="m"> 남자</label>
+		<input type="radio" value="FeMale" id="f" name="gen"><label for="f"> 여자</label><br> <!-- name 값이 똑같아야 둘중 하나만 선택 가능해진다. -->
+		<label class="w3-col m2" for="id"><h4>I D : </h4></label><input class="w3-input" type="text" id="id" name="id">
+		<label class="w3-col m2" for="pw"><h4>P W : </h4></label><input class="w3-input" type="password" id="pw" name="pw">
+	</div>
+	</div> 
+</body>
+</html>

@@ -1,0 +1,50 @@
+		body {
+			text-align: center;
+			background-image: url('../../img/background_img2.jpg');
+			background-size: 50%;
+			
+		}
+		.iblock{
+			display: inline-block;
+		}
+		
+		.div100 {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+		}
+
+		.round50 {
+			border-radius: 50%;
+		}
+		
+		.sh10 {
+			box-shadow: 0 0 10px #F500FF;
+		}
+		
+		.dContainer{
+			width: 110px;
+			height: 110px;
+			padding: 5px;
+			border: 1px solid orange;
+		}
+		#img1{
+			width: auto;
+			height: 100px;
+		}
+		#id1{
+			overflow: hidden;
+			margin-top: 5px;
+		}
+		#id2{
+			width: 100px;
+			height: auto;
+			margin-top: 20px;
+		}
+		#id3{
+			background-color: orange;
+			border: 2px solid coral;
+		}
+		#id4{
+			background-color: coral;
+		}

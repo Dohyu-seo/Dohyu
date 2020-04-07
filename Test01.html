@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<meta CharSet="UTF-8">
+<title>Test</title>
+<style>
+
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+	<div style="display: inline-block; width: 30%; background-color: lightgray;"><p>abcd</p></div>
+	<div style="display: inline-block; width: 40%; border: 1px solid gray; text-align: center; padding: 100px;">
+	<!-- 
+		상위태그에서 가운데 정렬을 지정해보자.
+		내용물은 모두 텍스트로 간주 되기때문에
+		text-align 속성을 사용하면 된다.
+			예 ]
+				왼쪽   정렬 : text-align: left;
+				오른쪽 정렬 : text-align: right;
+				가운데 정렬 : text-align: center;
+	 -->
+		<h2>DIV Test</h2>
+		<span style="display: inline-block; width: 50%; height: 70px; background-color: orange; margin: 50px; margin-bottom: 0px;">abcd1</span><!--
+		이 부분은 화이트 스페이스라고 해서
+		다음 태그에 영향을 주는 공백태그이다.
+		따라서 사이즈가 가로폭에 맞더라도 이 태그가 영향을 주기 때문에 줄바꿈이 되는 경우가 있다.
+			
+			화이트 스페이스 처리 방법
+				1. 지금처럼 주석으로 처리한다.
+				2. 상위태그의 폰트사이즈를 0으로 하는 방법
+		--><span style="display: inline-block; width: 50%; background-color: lime; margin-top: 0px;">abcd2</span>
+		
+		<!-- margin 테스트 -->
+			<span style="display: inline-block; width: 50%; height: 70px; background-color: orange; margin: 0px 50px 0px 50px;">abcd1</span><!-- 
+			앞에있는 margin의 px가 상하 뒤가 좌우,  4개를 적을 때에는 시계방향(top, right, bottom, left)으로 지정해준다.
+			
+				margin: 사방위마진;
+				margin: top_bottom right_left;
+				margin: top right_left bottom;
+				margin: top right bottom left;
+				
+				padding도 마찬가지 방법으로 지정해줄 수 있다.
+				
+		--><span style="display: inline-block; width: 50%; background-color: lime; margin-top: 0px;">abcd2</span>
+	</div>
+	<!-- 
+		패딩(Padding) : 내용물과 테두리와의 거리
+		마진(Margin)  : 주위 태그와의 간격
+		 -->
+</body>
+</html>
