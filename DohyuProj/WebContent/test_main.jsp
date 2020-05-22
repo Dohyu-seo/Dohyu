@@ -7,7 +7,6 @@
 <meta charset="UTF-8">
 <title>회원 메인페이지</title>
 <link rel="stylesheet" href="/BookNet/css/proj.css">
-<link rel="stylesheet" href="/BookNet/css/modal.css">
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
 <script type="text/javascript" src="/BookNet/js/jquery-3.5.0.min.js"></script>
 <style>
@@ -31,29 +30,44 @@
 				$(this).css('background-position', '-208px -370px');
 			});
 
-			//무한스크롤
 			
 			// footerUp
 			var hei = $('#footer-wrap').css("height");
-			alert(hei);
-		 $("#footer-wrap").mouseenter(function(){
-			if($('#footer-wrap').css("height") == "100px"){
-				$('#footer-wrap').css("transition","all 0.6s");
-				$('#footer-wrap').css("height","250px");
-				
-			} else if($('#footer-wrap').css("height") == hei){
-				$('#footer-wrap').css("transition","all 0.6s");
-				$('#footer-wrap').css("height","250px");
-			}
-	 	$("#footer-wrap").mouseleave(function(){
-	 		if($('#footer-wrap').css("height") == "250px"){
-	 			$('#footer-wrap').css("height", "100px");
-				$('#footer-wrap').css("transition","all 0.6s");
-				$('#footer-wrap').css("overflow","hidden");
-	 		}
-		});
-	});
-});
+			 $("#footer-wrap").mouseenter(function(){
+					if($('#footer-wrap').css("height") == "100px"){
+						$('#footer-wrap').css("transition","all 0.6s");
+						$('#footer-wrap').css("background-color","black");
+						$('#footer-wrap').css("color","white");
+						$('#footer-wrap').css("height","200px");
+						
+					} else if($('#footer-wrap').css("height") == hei){
+						$('#footer-wrap').css("transition","all 0.6s");
+						$('#footer-wrap').css("background-color","black");
+						$('#footer-wrap').css("color","white");
+						$('#footer-wrap').css("height","200px");
+					}
+			 	$("#footer-wrap").mouseleave(function(){
+			 		if($('#footer-wrap').css("height") == "200px"){
+			 			$('#footer-wrap').css("height", "100px");
+						$('#footer-wrap').css("background-color","#fff");
+						$('#footer-wrap').css("color","#000");
+						$('#footer-wrap').css("transition","all 0.6s");
+						$('#footer-wrap').css("overflow","hidden");
+			 		}
+				});
+			});
+			
+			 //foot bar
+			/*  var wid = $('footer').css("width");
+			 var target2 = wid.split("px"); // -string-
+			 target2[0] *= 1; // -toNumber-
+			 //alert(typeof(target2[0]));
+			 var footbar = target2[0]/3;
+			 $('#comp').css("margin-left",footbar);
+			 $('#team').css("margin-left",footbar);
+			 $('#maker').css("margin-left",footbar);*/
+			 
+}); 
 </script>
 </head>
 <body>
@@ -158,14 +172,15 @@
 			</div>
 		</div>
 		<!-- 풋터부분 -->
-		<footer id="footer-wrap" style="padding:10px;">		
-		   <div class="footer" style="text-align: center;">
-			    <p>Copyright © 2018 tcpschool.co.,Ltd. All rights reserved.</p>
-			    <address>Contact webmaster for more information. 070-1234-5678</address>
-           </div>
-           <div  style="text-align: center;">
-           		<span>BookNet KOR 만든이 : 박기윤 김이슬 이명환 서동혁 우현우</span>
-           </div>
+		<footer id="footer-wrap" style="padding:10px; height: 100px;">		
+					<h3 style="position:absolute; top:0px; left: 350px; display: flex;">Company</h3><br><h4 style="position:absolute;  top:25px; left: 352px; display: flex; font-size: 10pt;">Increpas</h4><br><h4 style="position:absolute; top:45px; left: 352px; display: flex; font-size:10pt;">서울특별시 관악구 신림동 시흥대로 552</h4>
+					<h3 style="position:absolute; top:0px; left: 800px; display: flex;">Project_Team</h3><br><h4 style="position:absolute; top:25px; left: 802px; display: flex; font-size: 10pt;">BookNet KOR</h4><br><h4 style="position:absolute; top:45px; left: 802px; display: flex; font-size:10pt;">PageTurner</h4>
+					<h3 style="position:absolute; top:0px; left: 1200px; display: flex;">만든이</h3><br><h4 style="position:absolute; top:25px; left: 1202px; display: flex; font-size: 10pt;">박 기윤 | 김 이슬 | 이 명환</h4><br><h4 style="position:absolute; top:45px; left: 1202px; display: flex; font-size:10pt;">서 동혁 | 우 현우 |</h4>
+			    <small>
+			    <p style="position:absolute; top:120px; left: 800px; display: flex;">Copyright © 2018 tcpschool.co.,Ltd. All rights reserved.</p>
+			    <address style="position:absolute; top:140px; left: 800px; display: flex;">Contact webmaster for more information. 070-1234-5678</address>
+			    </small>
+			    <img src="https://img.icons8.com/cotton/64/000000/apple--v1.png" style="position:absolute; top:50px; left: 1600px; display: flex; width:128px; height: 128px;"/>
 		</footer>
 	</div>
 </body>
