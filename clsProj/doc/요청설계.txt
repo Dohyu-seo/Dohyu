@@ -1,0 +1,230 @@
+-----------------------------------------------------------------
+
+0. 메인 폼 요청
+
+	요청내용	: / or /main.cls
+
+	파라미터	: none
+
+	컨트롤러	: com.increpas.www.controller.MainController
+
+	뷰			: /main.jsp
+
+-----------------------------------------------------------------
+
+1. 로그인 폼 요청
+
+	요청내용	: /member/login.cls
+
+	파라미터	: none
+
+	컨트롤러	: com.increpas.www.controller.member.LoginForm
+
+	뷰			: /member/Login.jsp
+
+-----------------------------------------------------------------
+
+2. 로그인 처리 요청
+
+	요청내용	: /member/loginProc.cls
+
+	파라미터	: id, pw
+
+	컨트롤러	: com.increpas.www.controller.member.LoginProc
+
+	뷰			: redirect:/clsProj/main.jsp
+
+-----------------------------------------------------------------
+
+3. 로그아웃 처리 요청
+
+	요청내용	: /member/logoutProc.cls
+
+	파라미터	: none
+
+	컨트롤러	: com.increpas.www.controller.member.LogoutProc
+
+	뷰			: redirect:/clsProj/main.jsp
+
+-----------------------------------------------------------------
+
+# 회원가입 요청
+
+-----------------------------------------------------------------
+
+4. 회원가입 폼 요청
+
+	요청내용	: /member/joinForm.cls
+
+	파라미터	: none
+
+	컨트롤러	: com.increpas.www.controller.member.JoinForm
+
+	뷰			: /member/Join.jsp
+
+-----------------------------------------------------------------
+
+3. 회원가입 처리 요청
+
+	요청내용	: /member/joinProc.cls
+
+	파라미터	: none
+
+	컨트롤러	: com.increpas.www.controller.member.JoinProc
+
+	뷰			: redirect:/clsProj/main.jsp
+
+-----------------------------------------------------------------
+
+# 방명록 요청 처리
+
+-----------------------------------------------------------------
+# 댓글게시판 요청 처리
+1. 댓글게시판 리스트보기 처리 요청
+
+	요청내용	: /reBoard/reBoard.cls
+
+	파라미터	: now
+
+	컨트롤러	: com.increpas.www.controller.reBoard.reBoardList
+
+	뷰			: /reBoard/reBoard.jsp
+
+-----------------------------------------------------------------
+2. 댓글게시판 글입력 폼보기 처리 요청
+
+	요청내용	: /reBoard/reBoardWrite.cls
+
+	파라미터	: none
+
+	컨트롤러	: com.increpas.www.controller.reBoard.reBoardWrite
+
+	뷰			: /reBoard/reBoardWrite.jsp
+
+-----------------------------------------------------------------
+3. 댓글게시판 댓글입력 폼보기 처리 요청
+
+	요청내용	: /reBoard/reBoardReply.cls
+
+	파라미터	: nowPage
+
+	컨트롤러	: com.increpas.www.controller.reBoard.reBoardReply
+
+	뷰			: /reBoard/reBoardReply.jsp
+
+-----------------------------------------------------------------
+4. 댓글입력 처리 요청
+
+	요청내용	: /reBoard/reBoardRplProc.cls
+
+	파라미터	: nowPage
+
+	컨트롤러	: com.increpas.www.controller.reBoard.reBoardRplProc
+
+	뷰			: /reBoard/reBoardRplRedirect.jsp
+
+-----------------------------------------------------------------
+
+# 설문게시만 요청 처리
+
+-----------------------------------------------------------------
+1. 설문지 보기 처리 요청
+
+	요청내용	: /survey/survey.cls
+
+	파라미터	: none
+
+	컨트롤러	: com.increpas.www.controller.survey.Survey
+
+	뷰			: /survey/survey.jsp
+
+-----------------------------------------------------------------
+2. 설문응답 처리 요청
+
+	요청내용	: /survey/surveyProc.cls
+
+	파라미터	: sno, sack, sino
+
+	컨트롤러	: com.increpas.www.controller.survey.SurveyProc
+
+	뷰			: redirect : /clsProj /survey/surveyResult.cls
+
+-----------------------------------------------------------------
+3. 설문결과 처리 요청
+
+	요청내용	: /survey/surveyResult.cls
+
+	파라미터	: none
+
+	컨트롤러	: com.increpas.www.controller.survey.SurveyResult
+
+	뷰			: /survey/surveyResult.jsp
+
+-----------------------------------------------------------------
+4. 설문등록 뷰 보기 요청
+	요청내용	: /survey/surveyAdd.cls
+
+	파라미터	: none
+
+	컨트롤러	: com.increpas.www.controller.survey.SurveyAddForm
+
+	뷰			: /survey/surveyAdd.jsp
+
+-----------------------------------------------------------------
+
+5. 설문정보 등록 처리 요청
+	요청내용	: /survey/surveyInfoProc.ck
+
+	파라미터	: siBody, siStart, siEnd
+
+	컨트롤러	: com.increpas.www.controller.survey.SurveyInfoProc
+
+	뷰			: none(jSon data)
+
+-----------------------------------------------------------------
+6. 설문문항 등록 처리 요청
+	요청내용	: /survey/surveyQAProc.cls
+
+	파라미터	: sino, sq, sa1, sa2, sa3, sa4
+
+	컨트롤러	: com.increpas.www.controller.survey.SurveyQAProc
+
+	뷰			: /survey/surveyAdd.cls 
+
+-----------------------------------------------------------------
+
+------------------------------------------------------------------
+# 게시판 요청 처리
+1. 게시판 리스트보기 요청
+	요청내용 : /board/board.cls
+	파라미터 :	nowPage
+	컨트롤러 :	com.increpas.www.controller.board.BoardList
+	뷰	  : /board/boardList.jsp
+------------------------------------------------------------------
+2. 게시판 작성 뷰 보기 요청
+	요청내용 : /board/boardWrite.cls
+	파라미터 :	무
+	컨트롤러 :	com.increpas.www.controller.board.BoardWrite
+	뷰	  : /board/boardWrite.jsp
+------------------------------------------------------------------
+3. 게시판 상세 보기 요청
+	요청내용 : /board/boardDetail.cls
+	파라미터 :	무
+	컨트롤러 :	com.increpas.www.controller.board.BoardDetail
+	뷰	  : /board/boardDetail.jsp
+------------------------------------------------------------------
+
+# 사원 정보 요청
+------------------------------------------------------------------
+1. 사원 리스트 페이지 요청
+	요청내용 : /ajax/empList.cls
+	파라미터 :	무
+	컨트롤러 :	com.increpas.www.controller.ajax.EmpList
+	뷰	     : /ajax/empList.jsp
+------------------------------------------------------------------
+2. 사원 상세정보 페이지 요청
+	요청내용 : /ajax/empInfo.cls
+	파라미터 :	eno
+	컨트롤러 :	com.increpas.www.controller.ajax.EmpInfo
+	뷰	     : none( json )
+------------------------------------------------------------------
